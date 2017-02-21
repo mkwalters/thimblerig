@@ -7,11 +7,16 @@ pygame.init()
 
 dimensions = (800,600)
 
+cup_color = (255,253,130)
+
 gameDisplay = pygame.display.set_mode(dimensions)
+gameDisplay.fill((27,153,139))
 
 pygame.display.set_caption('thimblerig')
 
-pygame.draw.circle(gameDisplay, (255,0,0), (dimensions[0] / 3, dimensions[1] / 3), 50)
+pygame.draw.circle(gameDisplay, cup_color, (dimensions[0] / 4, dimensions[1] / 2), 50)
+pygame.draw.circle(gameDisplay, cup_color, ( dimensions[0] / 2, dimensions[1] / 2), 50)
+pygame.draw.circle(gameDisplay, cup_color, ( 3 * dimensions[0] / 4, dimensions[1] / 2), 50)
 
 clock = pygame.time.Clock()
 
